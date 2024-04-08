@@ -1,0 +1,32 @@
+POST http://localhost:3333/events
+Content-Type: application/json
+
+{
+    "title": " Novo Teste",
+    "details": null,
+    "maximumAttendees": 1
+}
+
+###
+
+POST http://localhost:3333/events/13e5b552-1733-45f5-b27a-43f61bc5f8fe/attendees
+Content-Type: application/json
+
+{
+    "name": "Gabriela Almeida",
+    "email": "teste1@gmail.com.br"
+}
+
+###
+
+GET http://localhost:3333/events/13e5b552-1733-45f5-b27a-43f61bc5f8fe
+
+###
+GET http://localhost:3333/attendees/1/badge
+
+###
+GET http://localhost:3333/attendees/1/check-in
+
+###
+
+GET http://localhost:3333/events/13e5b552-1733-45f5-b27a-43f61bc5f8fe/attendees?query=Gabriela
